@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joel Luna - Portafolio</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #282C34;
+            color: #ABB2BF;
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        header {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #21252B;
+            padding: 20px;
+            color: #61AFEF;
+            font-size: 1.5em;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            font-size: 2rem;
+
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #1DA1F2;
+
+        }
+
+        .container,
+        .container-2 {
+            max-width: 542px;
+            padding: 20px;
+            background-color: #1E2127;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            font-family: monospace;
+
+        }
+
+        .container-2 {
+            margin-top: 20px;
+
+            text-align: justify;
+
+            line-height: 1.6;
+        }
+
+        .containerVertical {
+            max-width: 50px;
+            flex-direction: column;
+            height: 185px;
+            padding: 20px;
+            background-color: #1E2127;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            font-family: monospace;
+            display: flex;
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+        h2 {
+            color: #98C379;
+        }
+
+        .keyword {
+            color: #f12e2ead;
+        }
+
+        .vartype {
+            color: #2e90f1e4;
+        }
+
+        .type {
+            color: white;
+        }
+
+        .string {
+            color: #98C379;
+        }
+
+        .comment {
+            color: #5C6370;
+        }
+
+        .code {
+            padding-left: 35px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #21252B;
+            color: #ABB2BF;
+            margin-top: 20px;
+        }
+
+        .presentation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 700px;
+        }
+
+        .container-2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .container-2 i {
+            font-size: 1.9rem;
+            color: white;
+        }
+
+        .tech-icon {
+            width: 40px;
+
+            height: auto;
+            filter: invert(1);
+
+        }
+
+        .container-head {
+            color: #61AFEF;
+
+            text-align: center;
+
+
+
+            font-size: 1.6rem;
+
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: ABB2BF;
+            width: 100%;
+        }
+
+        .container-2 p {
+            color: #ABB2BF;
+
+            font-size: 0.9rem;
+
+        }
+
+        .experience-images {
+            display: flex;
+            gap: 20px;
+
+            justify-content: center;
+
+        }
+
+        .experience-images img {
+            max-width: 100px;
+
+            max-height: 100px;
+
+            filter: grayscale(100%);
+
+            transition: filter 0.3s ease;
+
+            border-radius: 8px;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+        }
+
+        .experience-images img:hover {
+            filter: grayscale(0%);
+
+        }
+
+        .text-slider {
+            font-family: 'Courier New', Courier, monospace;
+            color: #98C379;
+
+            font-size: 1em;
+        }
+
+        .text-slider-items {
+            display: none;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <!-- FontAwesome para redes y algunos lenguajes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Devicon para frameworks, librerías y más tecnologías -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Carga Typed.js desde un CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="presentation">
+            <div class="container">
+                <p><span class="keyword">private static</span> <span class="vartype">String</span> <span
+                        class="type">Hello()</span> { </p>
+                <div class="code">
+                    <p class="comment">// Who am I?</p>
+                    <p><span class="type">String</span> name = <span class="string">"Joel Nicolas Luna
+                            Valdivia"</span>;
+                    </p>
+                    <p><span class="type">String</span> rol = <span class="string text-slider-items">"FrontEnd
+                            Developer", "BackEnd Developer" ,
+                            "Full-Stack Developer", "Quality Assurance"</span><strong class="text-slider"></strong>;
+                    </p>
+                    <p><span class="keyword">return <span class="type">String.format(<span class="string">"Hello my name
+                                    is
+                                    %s.
+                                    %s"</span>, name, rol)</span> </span>;</p>
+                </div>
+                <p>}</p>
+
+            </div>
+            <div class="containerVertical">
+                <div class="social-icons">
+                    <a href="https://github.com/nnicolasluna" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="social-icons">
+                    <a href="http://linkedin.com/in/jnlv" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div class="social-icons">
+                    <a href="mailto:nnicolasluna@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://docs.google.com/document/d/1ZF6JO828M5K9eh3-ntHGt2mbYmFT8hyuTPdOTvy1m5A/edit?usp=sharingf"
+                        download target="_blank">
+                        <i class="fas fa-file-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-2">
+            <div class="container-head">Who am I?</div>
+            Hello, I'm a full-stack developer with skills in systems design, development, and maintenance. My experience
+            in quality assurance and development allows me to have a comprehensive view of the software lifecycle. I
+            specialize in creating efficient and scalable solutions, optimizing performance and ensuring high quality
+            standards in each project.
+        </div>
+        <div class="container-2">
+            <div class="container-head">Skills</div>
+            <i class="devicon-java-plain"></i>
+            <i class="devicon-csharp-plain"></i>
+            <i class="devicon-php-plain"></i>
+            <i class="devicon-javascript-plain"></i>
+            <i class="devicon-typescript-plain"></i>
+
+            <i class="devicon-angular-plain"></i>
+            <i class="devicon-laravel-plain"></i>
+            <i class="devicon-vuejs-plain"></i>
+
+            <i class="devicon-dotnetcore-plain"></i>
+            <i class="devicon-spring-plain"></i>
+            <i class="devicon-flask-original"></i>
+            <i class="devicon-react-original"></i>
+
+            <i class="fas fa-globe"></i> Español (Nativo)
+            <i class="fas fa-language"></i> Inglés (B2)
+        </div>
+
+        <div class="container-2">
+            <div class="container-head">Experience</div>
+            Details of my work experience can be found on my CV.
+            <div class="experience-images">
+                <img
+                    src="https://scontent.flpb1-2.fna.fbcdn.net/v/t39.30808-6/271853600_5289861374374893_6265293493139903690_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=UubVbaNcW-gQ7kNvgFt9D6I&_nc_oc=AdkEvaa6cZwSpCUqqL316syfe90IGf1hqir8Ju3-1w2OSzJlBwl3vb9_KINrPzhoAd4&_nc_zt=23&_nc_ht=scontent.flpb1-2.fna&_nc_gid=QBDbiFiyjtv6nDe3lLO8_Q&oh=00_AYG90k5dvIjfDk0Ywi9FPxk7fmYx1An1J6vvLtyCtRXTjQ&oe=67E95955" />
+
+                <img
+                    src="https://scontent.flpb1-2.fna.fbcdn.net/v/t39.30808-6/272127217_308695847882573_5146531585808597575_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=QTFRN92gB0gQ7kNvgG5Rpqi&_nc_oc=AdkOlrcefDQK2LVwiBGzXIdBYfQTUkh96AviE5UAWZzYQ86z-ZmaUfi1nKiSHXzXmCg&_nc_zt=23&_nc_ht=scontent.flpb1-2.fna&_nc_gid=MKBoBwyfUEzjFTwbbRdVpA&oh=00_AYEkr27-iR4zr5m609-Fui77v-tkiVrGRDbRP2mpXt-g1w&oe=67E94A30" />
+                <img src="https://pbs.twimg.com/profile_images/1333388537320919041/txb7NDCJ_400x400.jpg" />
+            </div>
+
+        </div>
+
+        <div class="container-2">
+            <div class="container-head">Education</div>
+            <div class="experience-images">
+                <img
+                    src="https://scontent.flpb1-2.fna.fbcdn.net/v/t39.30808-6/460834034_560793759947622_6025556637619565084_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=3zl0h2yUy3oQ7kNvgF9EyRl&_nc_oc=AdmuNWZ1WqOby7Av2HqZ-3at5eDhwYZUlheilxocOI1Hkr-lQfxOIMoW6xAKgOJB-vE&_nc_zt=23&_nc_ht=scontent.flpb1-2.fna&_nc_gid=9z7n-RZK-IJfzeNdUjbNlw&oh=00_AYGkkbtRpv1_q1u2-vHA-9Zkm2iC48yO5ii6AEUNUebTTw&oe=67E949BE" />
+                <img
+                    src="https://scontent.flpb1-1.fna.fbcdn.net/v/t39.30808-6/301813363_572545314665377_8783780153677326986_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=gCQoVaWadA4Q7kNvgEqd7EW&_nc_oc=AdmspfjrQ6iDPWtkEYX2_Fj2DviSh4xH2LyGRk3DFHDyxK8gej8f3bL9f8yM04mOTSU&_nc_zt=23&_nc_ht=scontent.flpb1-1.fna&_nc_gid=xU3CzVOLRphYO_iNApdw2Q&oh=00_AYE-LpDhsHD4xEkU9hjT_fdVK2qVMuiDgyVOpaqlrjTsow&oe=67E9530D" />
+                <img
+                    src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/themes/2160361399/settings_images/3117e55-2f00-2883-fc74-4fc8db5ed0db_0fbdb0f7-e5dd-4f79-8100-9b33fa79fdab.png" />
+                <img src="https://s.udemycdn.com/meta/default-meta-image-v2.png" />
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+        if ($('.text-slider').length == 1) {
+            var typed_strings = $('.text-slider-items').text(); 
+            var typed = new Typed('.text-slider', {
+                strings: typed_strings.split(','),  
+                typeSpeed: 80,                      
+                loop: true,                         
+                backDelay: 1100,                    
+                backSpeed: 30                       
+            });
+        }
+    </script>
+</body>
+
+</html>
