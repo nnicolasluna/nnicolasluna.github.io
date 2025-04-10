@@ -4,539 +4,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Joel Luna - Portafolio</title>
-    <style>
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #282A36;
-            color: #F8F8F2;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .container,
-        .container-2 {
-            max-width: 542px;
-            padding: 20px;
-            background-color: #1E1F29;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            font-family: monospace;
-            border-left: 5px solid #268BD2;
-        }
-
-        .container-2:hover {
-            background-color: #44475A;
-            transition: background 0.3s ease-in-out;
-        }
-
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-            margin-bottom: 30px;
-        }
-
-        header {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #21252B;
-            padding: 20px;
-            color: #61AFEF;
-            font-size: 1.5em;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-        }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .social-icons a {
-            font-size: 2rem;
-
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .social-icons a:hover {
-            color: #1DA1F2;
-        }
-
-        .container-2 {
-            margin-top: 20px;
-            text-align: justify;
-            line-height: 1.6;
-        }
-
-        .containerVertical {
-            max-width: 50px;
-            flex-direction: column;
-            height: 185px;
-            padding: 20px;
-            background-color: #1E2127;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            font-family: monospace;
-            display: flex;
-            align-items: center;
-
-            justify-content: center;
-
-        }
-
-        h2 {
-            color: #98C379;
-        }
-
-        .keyword {
-            color: #f12e2ead;
-        }
-
-        .vartype {
-            color: #2e90f1e4;
-        }
-
-        .type {
-            color: white;
-        }
-
-        .string {
-            color: #98C379;
-        }
-
-        .comment {
-            color: #5C6370;
-        }
-
-        .code {
-            padding-left: 35px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #21252B;
-            color: #ABB2BF;
-            margin-top: 20px;
-        }
-
-        .presentation {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            max-width: 700px;
-        }
-
-        .container-2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .container-2 i {
-            font-size: 1.9rem;
-            color: white;
-        }
-
-        .tech-icon {
-            width: 40px;
-
-            height: auto;
-            filter: invert(1);
-
-        }
-
-        .container-head {
-            color: #61AFEF;
-
-            text-align: center;
-
-
-
-            font-size: 1.6rem;
-
-            font-weight: bold;
-            text-transform: uppercase;
-            background-color: ABB2BF;
-            width: 100%;
-        }
-
-        .container-2 p {
-            color: #ABB2BF;
-
-            font-size: 0.9rem;
-
-        }
-
-        .experience-images {
-            display: flex;
-            gap: 20px;
-
-            justify-content: center;
-
-        }
-
-        .experience-images img {
-            max-width: 100px;
-
-            max-height: 100px;
-
-            filter: grayscale(100%);
-
-            transition: filter 0.3s ease;
-
-            border-radius: 8px;
-
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
-        }
-
-        .experience-images img:hover {
-            filter: grayscale(0%);
-
-        }
-
-        .text-slider {
-            font-family: 'Courier New', Courier, monospace;
-            color: #98C379;
-
-            font-size: 1em;
-        }
-
-        .text-slider-items {
-            display: none;
-        }
-
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .tooltip-text {
-            visibility: hidden;
-            width: 120px;
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 5px;
-            border-radius: 5px;
-            position: absolute;
-            left: 125%;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0;
-            transition: opacity 0.3s;
-            font-size: 12px;
-            white-space: nowrap;
-        }
-
-        .tooltip:hover .tooltip-text {
-            visibility: visible;
-            opacity: 1;
-        }
-    </style>
-    <style scoped>
-        .projects {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .title {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .project-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .project-card {
-            width: 500px;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background: white;
-        }
-
-        .project-image {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        .buttons {
-            margin-top: 10px;
-        }
-
-        .btn {
-            display: inline-block;
-            margin: 5px;
-            padding: 8px 15px;
-            background: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .btn:hover {
-            background: #0056b3;
-        }
-
-
-
-
-        .chips {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
-
-        .chip {
-            background-color: #007bff;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .chips {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .chip:hover {
-            background-color: #0056b3;
-        }
-
-        .buttons {
-            margin-top: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-right: 10px;
-            text-decoration: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-
-        .project-title {
-            color: #333;
-        }
-
-        .project-logo {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-    </style>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 </head>
 
 <body>
-
-
-    <div class="main-container">
+    <div id="particles-js"></div>
+    <div class="contenedor-grande">
         <div class="presentation">
             <div class="container">
+                <figure class="avatar-box"> <img src="foto.jpeg"></figure>
                 <p><span class="keyword">private static</span> <span class="vartype">String</span> <span
-                        class="type">Hello()</span> { </p>
+                        class="type">Portfolio ()</span> { </p>
                 <div class="code">
-                    <p class="comment">// Who am I?</p>
                     <p><span class="type">String</span> name = <span class="string">"Joel Nicolas Luna
                             Valdivia"</span>;
                     </p>
                     <p><span class="type">String</span> rol = <span class="string text-slider-items">"FrontEnd
                             Developer", "BackEnd Developer" ,
-                            "Full-Stack Developer", "Quality Assurance"</span><strong class="text-slider"></strong>;
+                        </span><strong class="text-slider"></strong>;
                     </p>
-                    <p><span class="keyword">return <span class="type">String.format(<span class="string">"Hello my name
+                    <p><span class="keyword">return <span class="type">String.format(<span class="string">"Hello my
+                                    name
                                     is
                                     %s.
                                     %s"</span>, name, rol)</span> </span>;</p>
                 </div>
                 <p>}</p>
-
-            </div>
-            <div class="containerVertical">
-                <div class="social-icons">
-                    <a href="https://github.com/nnicolasluna" target="_blank" class="tooltip">
-                        <i class="fab fa-github"></i>
-                        <span class="tooltip-text">GitHub</span>
-                    </a>
+                <div class="separator"></div>
+                <div class="description">
+                    <div class="container-head">Languages</div>
+                    <i class="fas fa-globe"></i> Spanish (Nativo)
+                    <i class="fas fa-language"></i> English (B2)
                 </div>
-                <div class="social-icons">
-                    <a href="http://linkedin.com/in/jnlv" target="_blank" class="tooltip">
-                        <i class="fab fa-linkedin"></i>
-                        <span class="tooltip-text">LinkedIn</span>
-                    </a>
-                </div>
-                <div class="social-icons">
-                    <a href="mailto:nnicolasluna@gmail.com" target="_blank" class="tooltip">
-                        <i class="fas fa-envelope"></i>
-                        <span class="tooltip-text">Enviar Correo</span>
-                    </a>
-                </div>
-
-                <div class="social-icons">
-                    <a href="https://docs.google.com/document/d/1ZF6JO828M5K9eh3-ntHGt2mbYmFT8hyuTPdOTvy1m5A/edit?usp=sharingf"
-                        download target="_blank" class="tooltip">
-                        <i class="fas fa-file-download"></i>
-                        <span class="tooltip-text">Descargar CV</span>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-        <div class="container-2">
-            <div class="container-head">Who am I?</div>
-            Hello, I'm a full-stack developer with skills in systems design, development, and maintenance. My experience
-            in quality assurance and development allows me to have a comprehensive view of the software lifecycle. I
-            specialize in creating efficient and scalable solutions, optimizing performance and ensuring high quality
-            standards in each project.
-        </div>
-        <div class="container-2">
-            <div class="container-head">Skills</div>
-            <i class="devicon-java-plain"></i>
-            <i class="devicon-csharp-plain"></i>
-            <i class="devicon-php-plain"></i>
-            <i class="devicon-javascript-plain"></i>
-            <i class="devicon-typescript-plain"></i>
-
-            <i class="devicon-angular-plain"></i>
-            <i class="devicon-laravel-plain"></i>
-            <i class="devicon-vuejs-plain"></i>
-
-            <i class="devicon-dotnetcore-plain"></i>
-            <i class="devicon-spring-plain"></i>
-            <i class="devicon-flask-original"></i>
-            <i class="devicon-react-original"></i>
-
-            <i class="fas fa-globe"></i> Español (Nativo)
-            <i class="fas fa-language"></i> Inglés (B2)
-        </div>
-
-        <div class="container-2">
-            <div class="container-head">Experience</div>
-            Details of my work experience can be found on my CV.
-            <div class="experience-images">
-                <img
-                    src="https://scontent.flpb1-2.fna.fbcdn.net/v/t39.30808-6/271853600_5289861374374893_6265293493139903690_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=UubVbaNcW-gQ7kNvgFt9D6I&_nc_oc=AdkEvaa6cZwSpCUqqL316syfe90IGf1hqir8Ju3-1w2OSzJlBwl3vb9_KINrPzhoAd4&_nc_zt=23&_nc_ht=scontent.flpb1-2.fna&_nc_gid=QBDbiFiyjtv6nDe3lLO8_Q&oh=00_AYG90k5dvIjfDk0Ywi9FPxk7fmYx1An1J6vvLtyCtRXTjQ&oe=67E95955" />
-
-                <img
-                    src="https://scontent.flpb1-2.fna.fbcdn.net/v/t39.30808-6/272127217_308695847882573_5146531585808597575_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=QTFRN92gB0gQ7kNvgG5Rpqi&_nc_oc=AdkOlrcefDQK2LVwiBGzXIdBYfQTUkh96AviE5UAWZzYQ86z-ZmaUfi1nKiSHXzXmCg&_nc_zt=23&_nc_ht=scontent.flpb1-2.fna&_nc_gid=MKBoBwyfUEzjFTwbbRdVpA&oh=00_AYEkr27-iR4zr5m609-Fui77v-tkiVrGRDbRP2mpXt-g1w&oe=67E94A30" />
-                <img src="https://pbs.twimg.com/profile_images/1333388537320919041/txb7NDCJ_400x400.jpg" />
-            </div>
-
-        </div>
-
-        <div class="container-2">
-            <div class="container-head">Projects</div>
-            <div class="projects">
-
-
-                <div class="project-card">
-                    <img src="https://github.com/nnicolasluna/FrontEnd-Angular-V2/blob/main/src/assets/gamb.png?raw=true"
-                        alt="Logo NFC" class="project-logo" />
-
-                    <h3 class="project-title">Sistema Financiero NFC</h3>
-                    <p>Desarrollo de un sistema bancario privado para una empresa llamado NFC. Este sistema gestiona
-                        transacciones, registros de clientes, y tareas bancarias esenciales de forma segura y eficiente.
-                    </p>
-                    <h3 class="project-title">Tecnologías utilizadas:</h3>
-                    <div class="chips">
-                        <span class="chip">Angular</span>
-                        <span class="chip">Spring Boot</span>
-                        <span class="chip">PostgreSQL</span>
-                        <span class="chip">Python</span>
+                <div class="separator"></div>
+                <div class="contactos-redes">
+                    <div class="contact-item">
+                        <div class="contact1">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="vartype">EMAIL</span>
+                            <a href="mailto:nnicolasluna@gmail.com">
+                                <span class="value email">nnicolasluna@gmail.com</span>
+                            </a>
+                        </div>
                     </div>
-
-                </div>
-
-            </div>
-            <div class="projects">
-
-                <div class="project-card">
-
-                    <img src="https://faceba.eba.com.bo/img/logos/faceba.png" alt="Logo NFC" class="project-logo" />
-
-                    <h3 class="project-title">FACEBA</h3>
-                    <p>Fui responsable del mantenimiento e implementación institucional del sistema FACEBA, un software
-                        consolidado y
-                        probado en entornos de producción. Durante este proceso, me enfoqué en optimizar la eficiencia
-                        operativa del sistema, implementando mejoras clave y asegurando su estabilidad mediante un
-                        exhaustivo proceso de pruebas.
-                    </p>
-                    <h3 class="project-title">Tecnologías utilizadas:</h3>
-                    <div class="chips">
-                        <span class="chip">Vue JS</span>
-                        <span class="chip">Laravel</span>
-                        <span class="chip">MySQL</span>
+                    <div class="contact-item">
+                        <div class="contact1">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="vartype">LINKEDIN</span>
+                            <a href="http://linkedin.com/in/jnlv">
+                                <span class="value email">jnlv</span>
+                            </a>
+                        </div>
                     </div>
-
-                </div>
-
-            </div>
-            <div class="projects">
-
-                <div class="project-card">
-
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX6220Sh1ca5x9QpuH8TjoVjV0z0cEeA42wQ&s"
-                        alt="Logo NFC" class="project-logo" />
-
-                    <h3 class="project-title">SISTEMA DE GESTION DE NOTAS - ARMANDO URIA</h3>
-                    <p>Desarrollo e implementación de un sistema para una unidad educativa llamada Armando Escobar Uria,
-                        en cual se integraron distintos roles con diferentes funcionalidades.
-                    </p>
-                    <h3 class="project-title">Tecnologías utilizadas:</h3>
-                    <div class="chips">
-                        <span class="chip">Blade</span>
-                        <span class="chip">Laravel</span>
-                        <span class="chip">MySQL</span>
-                    </div>
-                    <div class="buttons">
-                        <a href="http://github.com/nnicolasluna/School-ArmandoUria" target="_blank"
-                            class="btn">Código</a>
+                    <div class="contact-item">
+                        <div class="contact1">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="vartype">GITHUB</span>
+                            <a href="https://github.com/nnicolasluna">
+                                <span class="value email">nnicolasluna</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
             </div>
+
         </div>
+        <div class="main-container">
+            <div class="container-2">
+
+                <nav class="navbar">
+                    <ul class="navbar-list">
+                        <li class="navbar-item"><button class="navbar-link active" data-nav-link
+                                data-target="about">About</button></li>
+                        <li class="navbar-item"><button class="navbar-link" data-nav-link
+                                data-target="resume">Resume</button></li>
+                        <li class="navbar-item"><button class="navbar-link" data-nav-link
+                                data-target="projects">Projects</button></li>
+                    </ul>
+                </nav>
+
+                <section id="about" class="content-section active">
+                    <div class="title_text">About Me</div>
+                    <div class="simple_text">
+                        Hello, I'm a full-stack developer with skills in systems design, development, and maintenance.
+                        My
+                        experience
+                        in quality assurance and development allows me to have a comprehensive view of the software
+                        lifecycle. I
+                        specialize in creating efficient and scalable solutions, optimizing performance and ensuring
+                        high
+                        quality
+                        standards in each project.
+                    </div>
+                    <div class="simple_text">
+                        My goal is to continually grow as a developer and bring creativity and precision to every
+                        project I
+                        undertake.
+                    </div>
+
+                    <div class="title_text">Skills</div>
+                    <div class="skills-wrapper">
+                        <div class="skills1">
+                            <i class="fab fa-bitcoin"></i>
+                            <i class="devicon-java-plain"></i>
+                            <i class="devicon-csharp-plain"></i>
+                            <i class="devicon-php-plain"></i>
+                            <i class="devicon-javascript-plain"></i>
+                            <i class="devicon-typescript-plain"></i>
+                            <i class="devicon-angular-plain"></i>
+                            <i class="devicon-laravel-plain"></i>
+                            <i class="devicon-vuejs-plain"></i>
+                            <i class="devicon-dotnetcore-plain"></i>
+                            <i class="devicon-spring-plain"></i>
+                            <i class="devicon-flask-original"></i>
+                            <i class="devicon-react-original"></i>
+                            <i class="fa-brands fa-github"></i>
+                            <i class="devicon-azuresqldatabase-plain"></i>
+                            <i class="devicon-linux-plain"></i>
+                            <i class="devicon-postgresql-plain"></i>
+
+                        </div>
+                    </div>
+
+                    <div class="title_text">Personal Endeavors</div>
+                    <div class="card_main">
+                        <div class="card_sec">
+                            <div class="card_icon">
+                                <i class="fa-solid fa-terminal"></i>
+                            </div>
+                            <div class="card_text">
+                                <div class="card_sec_title">Automation Scripting</div>
+                                Creating Python scripts to automate tasks and improve efficiency.
+                            </div>
+                        </div>
+                        <div class="card_sec">
+                            <div class="card_icon">
+                                <i class="fab fa-bitcoin"></i>
+                            </div>
+                            <div class="card_text">
+                                <div class="card_sec_title">Bitcoin</div>
+                                Bitcoin, cryptography, and blockchain networks
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_main">
+                        <div class="card_sec">
+                            <div class="card_icon">
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+                            <div class="card_text">
+                                <div class="card_sec_title">Economics </div>
+                                Learn and analyze how the global economy works
+                            </div>
+                        </div>
+                        <div class="card_sec">
+                            <div class="card_icon">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="card_text">
+                                <div class="card_sec_title">
+                                    Developing</div>
+                                Learning and implementing new development technologies with best practices,
+                                architectures, and efficient code.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_main">
+                        <div class="card_sec">
+                            <div class="card_icon">
+                                <i class="fa-solid fa-book"></i>
+                            </div>
+                            <div class="card_text">
+                                <div class="card_sec_title">Teach </div>
+                                I enjoy sharing my knowledge with others on software development and cryptocurrency.
+                            </div>
+                        </div>
+                        <div class="card_sec">
+                            <div class="card_icon">
+                                <i class="fa-solid fa-dumbbell"></i>
+                            </div>
+                            <div class="card_text">
+                                <div class="card_sec_title">
+                                    Physical Exercise</div>
+                                I am passionate about running marathons and walking long distances.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="resume" class="content-section">
+                    <!-- <div class="container-2"> -->
+                    <div class="title_text">Resume</div>
+                    <div class="download">
+                        <a href="https://docs.google.com/document/d/1ZF6JO828M5K9eh3-ntHGt2mbYmFT8hyuTPdOTvy1m5A/edit?usp=sharingf"
+                            download target="_blank" class="tooltip">
+                            <i class="fas fa-file-download"></i>
+                            Download Resume
+                        </a>
+                    </div>
+                    <div class="title_text">Experience</div>
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="dot"></div>
+                            <div class="content">
+                                <h3>Systems Development Assistant</h3>
+                                <p><strong>ADSIB</strong>, April 2023 — Sep 2023</p>
+                                <p>Implementation of functional and non-functional testing to improve system performance
+                                    and functionality.
+                                    Support and maintenance of digital signatures implemented in various systems
+                                    nationwide.
+                                    Development and implementation of manuals for web systems, optimizing training and
+                                    promoting efficient use of tools.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="dot"></div>
+                            <div class="content">
+                                <h3>Systems analyst</h3>
+                                <p><strong>GAMBARTE SRL</strong>, Dec 2023 — Sep 2024</p>
+                                <p>Systems analysis, design, and implementation, ensuring proper integration and
+                                    functionality.
+                                    Database modeling and system architecture definition to maximize efficiency and
+                                    scalability.
+                                    Development and implementation of front-end modules with an emphasis on usability
+                                    and user experience.
+                                    Implementation of endpoints in Spring Boot to structure robust and scalable back-end
+                                    logic based on REST microservices.
+                                    Implementation of automated testing with Karma and Cypress to ensure system quality,
+                                    stability, and proper functioning.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="dot"></div>
+                            <div class="content">
+                                <h3>Systems Development Assistant</h3>
+                                <p><strong>EMPRESA BOLIVIANA DE ALIMENTOS</strong>, Oct 2024 — Dec 2024</p>
+                                <p>Analysis and implementation of new modules, ensuring their efficient integration into
+                                    the system.
+                                    Continuous software maintenance and improvement, optimizing its performance and
+                                    stability.
+                                    Application of black-box and white-box testing to validate software quality,
+                                    security, and reliability.
+                                    Code refactoring and optimization, ensuring a cleaner, more scalable, and efficient
+                                    architecture.</p>
+                            </div>
+                        </div>
 
 
+
+                    </div>
+                </section>
+                <section id="projects" class="content-section">
+
+                    <div class="title_text">Experience</div>
+                    <div class="card_main_1">
+                        <div class="card_sec_1">
+                            <div class="card_icon_1">
+                                <img src="https://github.com/nnicolasluna/FrontEnd-Angular-V2/blob/main/src/assets/gamb.png?raw=true"
+                                    alt="Logo NFC" class="project-logo" />
+                            </div>
+                            <div class="card_text_1">
+                                <div class="card_sec_title">NFC financial system</div>
+                                Development of a private banking system for a company called NFC. This system manages
+                                transactions, customer records, and essential banking tasks securely and efficiently.
+                                <div class="card_sec_title">Technologies used:</div>
+                                <div class="chips">
+                                    <span class="chip">Angular</span>
+                                    <span class="chip">Spring Boot</span>
+                                    <span class="chip">PostgreSQL</span>
+                                    <span class="chip">Python</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_sec_1">
+                            <div class="card_icon_1">
+                                <img src="https://faceba.eba.com.bo/img/logos/faceba.png" alt="Logo NFC"
+                                    class="project-logo" />
+                            </div>
+                            <div class="card_text_1">
+                                <div class="card_sec_title">FACEBA</div>
+                                I was responsible for the institutional maintenance and implementation of the FACEBA
+                                system, a well-established and production-tested software. During this process, I
+                                focused on optimizing the system's operational efficiency, implementing key
+                                improvements, and ensuring its stability through a comprehensive testing process.
+                                <div class="card_sec_title">Technologies used:</div>
+                                <div class="chips">
+                                    <span class="chip">Vue JS</span>
+                                    <span class="chip">Laravel</span>
+                                    <span class="chip">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   <!--  <div class="card_main_1">
+                        <div class="card_sec_1">
+                            <div class="card_icon_1">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX6220Sh1ca5x9QpuH8TjoVjV0z0cEeA42wQ&s"
+                                    alt="Logo NFC" class="project-logo" />
+                            </div>
+                            <div class="card_text_1">
+                                <div class="card_sec_title">NOTE MANAGEMENT SYSTEM - ARMANDO URIA</div>
+                                Development and implementation of a system for the Armando Escobar Uria educational
+                                institution, integrating different roles with distinct functionalities.
+                                <div class="card_sec_title">Technologies used:</div>
+                                <div class="chips">
+                                    <span class="chip">Blade</span>
+                                    <span class="chip">Laravel</span>
+                                    <span class="chip">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_sec_1">
+
+                        </div>
+                    </div> -->
+                </section>
+            </div>
+        </div>
     </div>
+    </div>
+
     <script>
         if ($('.text-slider').length == 1) {
             var typed_strings = $('.text-slider-items').text();
@@ -552,48 +359,29 @@
 
     </script>
 
+    <!-- Librería de Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="scripts.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('[data-nav-link]');
+            const sections = document.querySelectorAll('.content-section');
 
-        const projects = [
-            {
-                title: 'Sistema Bancario NFC',
-                description: 'Desarrollo de un sistema bancario privado para una empresa llamado NFC. Este sistema gestiona transacciones, registros de clientes, y tareas bancarias esenciales de forma segura y eficiente.',
-                technologies: 'Angular, Spring Boot, PostgreSQL',
-                role: 'Desarrollador Full-Stack. Implementé la parte de frontend utilizando Angular y trabajé en la lógica de negocio y la integración de base de datos en el backend utilizando Spring Boot y PostgreSQL.',
-                demo: 'enlace-a-demo-del-proyecto',
-                repo: 'enlace-a-repositorio-del-proyecto',
-                image: 'ruta-a-imagen-del-proyecto.jpg'
-            },
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.forEach(btn => btn.classList.remove('active'));
+                    link.classList.add('active');
 
-        ];
+                    sections.forEach(section => section.classList.remove('active'));
 
-
-        const projectList = document.getElementById('project-list');
-
-
-        projects.forEach(project => {
-            const projectCard = document.createElement('div');
-            projectCard.classList.add('project-card');
-
-            projectCard.innerHTML = `
-                <img src="${project.image}" alt="${project.title}" class="project-image" />
-                <h3>${project.title}</h3>
-                <p>${project.description}</p>
-                <p><strong>Tecnologías utilizadas:</strong> ${project.technologies}</p>
-                <p><strong>Mi rol:</strong> ${project.role}</p>
-                <div class="buttons">
-                    <a href="${project.demo}" target="_blank" class="btn">Demo</a>
-                    <a href="${project.repo}" target="_blank" class="btn">Código</a>
-                </div>
-            `;
-
-
-            projectList.appendChild(projectCard);
+                    const targetId = link.getAttribute('data-target');
+                    const sectionToShow = document.getElementById(targetId);
+                    if (sectionToShow) {
+                        sectionToShow.classList.add('active');
+                    }
+                });
+            });
         });
-
-
-  
-
     </script>
 
 </body>
