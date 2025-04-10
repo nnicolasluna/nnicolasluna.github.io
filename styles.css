@@ -4,11 +4,12 @@ body {
     color: #8b949e;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
-.container,
 .container-2 {
-    max-width: 700px;
+    width: 55%;
     padding: 35px;
     background-color: #161b22;
     position: relative;
@@ -16,21 +17,34 @@ body {
     padding-top: 60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-family: monospace;
-
+    flex-wrap: wrap;
+    min-width: 330px;
+    margin: 5px;
 }
 
 .contenedor-grande {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    margin-top: 70px;
+    flex-direction: row;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    width: 75%;
+
 }
 
 
 .presentation {
-
-    max-width: 380px;
-    margin-right: 5px;
+    width: 15%;
+    min-width: 330px;
+    max-height: 650px;
+    padding: 35px;
+    background-color: #161b22;
+    position: relative;
+    border-radius: 5px;
+    padding-top: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: monospace;
+    margin: 5px;
 }
 
 .description {
@@ -494,37 +508,49 @@ a {
 .card_main {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
 }
+
 .card_main_1 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
 }
+
 .card_sec {
     background-color: #2e313d;
     padding: 15px;
     border-radius: 5px;
-    width: 70%;
-    margin: 1%;
+    width: 44%;
+    margin: 0.5%;
     display: flex;
     flex-direction: row;
     color: white;
     justify-content: center;
     align-items: center;
+    min-width: 300px;
+    flex-grow: 1;
 }
+
 .card_sec_1 {
     background-color: #2e313d;
     padding: 15px;
     border-radius: 5px;
-    width: 70%;
+    width: 42%;
     margin: 1%;
     display: flex;
     flex-direction: column;
     color: white;
     justify-content: center;
     align-items: center;
+    min-width: 300px;
+    flex-grow: 1;
 }
+
 .card_text_1 {
     display: flex;
     flex-direction: column;
@@ -532,6 +558,7 @@ a {
     justify-content: center;
     align-items: center;
 }
+
 .card_text {
     display: flex;
     flex-direction: column;
