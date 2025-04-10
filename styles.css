@@ -635,3 +635,8 @@ a {
     padding: 10px;
     border-radius: 5px;
 }
+@media (max-width: 767px) {
+    .contenedor-grande {
+        margin-top: 0px;
+    }
+}
