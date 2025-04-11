@@ -20,10 +20,29 @@
 <body>
     <div id="particles-js"></div>
     <div class="contenedor-grande">
+        <div class="presentation_phone">
+            <figure class="avatar-box_phone">
+                <img src="foto.jpeg">
+            </figure>
+            <div class="card_name">
+                <div class="name">Joel Nicolas Luna Valdivia</div>
+                <div class="role">Full Stack Developer</div>
+            </div>
+       <!--      <button class="expand-btn" id="expandBtn" onclick="openNav()">+</button> -->
+        </div>
         <div class="presentation">
-            <figure class="avatar-box"> <img src="foto.jpeg"></figure>
-            <p><span class="keyword">private static</span> <span class="vartype">String</span> <span
-                    class="type">Portfolio ()</span> { </p>
+            <figure class="avatar-box">
+                <img src="foto.jpeg">
+            </figure>
+            <div class="card_name">
+                <div class="name">Joel Nicolas Luna Valdivia</div>
+                <div class="role">Full Stack Developer</div>
+            </div>
+            <button class="expand-btn" id="expandBtn" onclick="openNav()">+</button>
+            <div class="code_title">
+                <p><span class="keyword">private static</span> <span class="vartype">String</span> <span
+                        class="type">Portfolio ()</span> { </p>
+            </div>
             <div class="code">
                 <p><span class="type">String</span> name = <span class="string">"Joel Nicolas Luna
                         Valdivia"</span>;
@@ -38,7 +57,10 @@
                                 %s.
                                 %s"</span>, name, rol)</span> </span>;</p>
             </div>
-            <p>}</p>
+            <div class="code_title">
+                <p>}</p>
+            </div>
+
             <div class="separator"></div>
             <div class="description">
                 <div class="container-head">Languages</div>
@@ -378,6 +400,23 @@
                 });
             });
         });
+
+        /* const btn = document.getElementById('expandBtn');
+        const presentation = document.getElementById('presentation');
+
+        btn.addEventListener('click', () => {
+            presentation.classList.toggle('collapsed');
+            btn.textContent = presentation.classList.contains('collapsed') ? 'Ver más' : 'Ver menos';
+        }); */
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
     </script>
 
 </body>
