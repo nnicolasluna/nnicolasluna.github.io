@@ -1,0 +1,141 @@
+Create a professional, production-ready developer portfolio using Next.js.
+
+Important deployment requirement:
+This project must work correctly on GitHub Pages as a static site.
+
+Technical constraints:
+- Use Next.js latest stable version with App Router.
+- Use TypeScript.
+- Use Tailwind CSS.
+- Use static export compatible architecture.
+- Do not use server-side rendering.
+- Do not use API routes.
+- Do not use dynamic server functions.
+- Do not use features that require a Node.js runtime.
+- The project must be compatible with `next build` + `next export` (or `output: 'export'` in next.config.js).
+- Use relative-safe asset paths suitable for GitHub Pages deployment.
+
+Project configuration requirements:
+- Include a proper `next.config.js`.
+- Configure `output: 'export'`.
+- Include `images: { unoptimized: true }`.
+- If needed, make the base path easy to configure for GitHub repository deployment.
+
+Architecture:
+- Use clean component-based architecture.
+- Use semantic HTML.
+- Use accessibility best practices.
+- Use modular reusable components.
+- Separate sections, UI components, and data.
+- Keep all editable content in a dedicated data file so I can later replace it with information from my CV.
+
+Design requirements:
+- Professional software engineer portfolio.
+- Modern, elegant, clean, and minimal.
+- Strong typography and visual hierarchy.
+- Smooth subtle animations only.
+- Fully responsive.
+- Mobile-first.
+- Proper desktop, tablet, and mobile layouts.
+- Sticky navigation.
+- Smooth scrolling.
+- Clean spacing and polished layout.
+
+Sections required:
+
+1. Hero
+- Full-width landing section
+- Name
+- Professional title
+- Short summary
+- CTA buttons:
+  - View Projects
+  - Contact Me
+  - Download CV
+
+2. About
+- Professional biography
+- Background
+- Main focus
+- Type of problems I solve
+
+3. Skills
+Group skills by categories:
+- Frontend
+- Backend
+- Databases
+- Tools
+- DevOps
+
+4. Experience
+Timeline layout.
+Each item must include:
+- Company
+- Role
+- Date range
+- Responsibilities
+- Achievements
+- Technologies used
+
+5. Projects
+Reusable data-driven project cards.
+Each project should contain:
+- Name
+- Description
+- Problem solved
+- Stack
+- GitHub URL
+- Live demo URL
+
+6. Education
+- Institution
+- Degree
+- Period
+
+7. Certifications
+- Optional section but included in architecture
+
+8. Contact
+- Email
+- LinkedIn
+- GitHub
+- Contact UI
+
+Navigation:
+- Sticky top navigation
+- Active section highlight while scrolling
+- Mobile hamburger menu
+
+Footer:
+- Professional minimal footer
+- Social links
+- Copyright
+
+Data architecture:
+Create a single typed data file with placeholders for:
+- personal information
+- summary
+- skills
+- experience
+- projects
+- education
+- certifications
+- social links
+
+Code quality:
+- Strong TypeScript typing
+- Reusable interfaces
+- Clean naming
+- Small maintainable components
+- No monolithic files
+
+Important:
+- Use placeholder content so I can replace it with my CV later.
+- Do not hardcode personal information inside components.
+- Generate production-ready code, not pseudo-code.
+
+Please provide:
+1. Recommended folder structure
+2. next.config.js
+3. All required files
+4. Deployment instructions for GitHub Pages
